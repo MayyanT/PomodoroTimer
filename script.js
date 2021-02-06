@@ -10,6 +10,7 @@ function displayUpdate(){
     let mins = Math.floor(time / 60);
     let secs = time % 60;
     
+    mins = (mins  < 10) ? '0' + mins : mins;
     secs = (secs<10) ? '0' + secs : secs;
     
     display.innerHTML = `${mins}:${secs}`;
