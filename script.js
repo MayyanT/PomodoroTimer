@@ -14,6 +14,11 @@ function displayUpdate(){
     
     display.innerHTML = `${mins}:${secs}`;
     time--;
+    
+    if( time === -1){
+        clearInterval(timer);
+        time = 0;
+    }
   }
 
   start.addEventListener('click', () =>{
